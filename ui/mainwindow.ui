@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Inter</family>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>ShopManager</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #ffffff;</string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="central_widget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="horizontal_layout">
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QToolButton" name="add_button">
+        <property name="minimumSize">
+         <size>
+          <width>35</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton {
+	background-color: #f2f3f7;
+	border: 1px solid #dcdcdc;
+	border-radius: 5px;
+	image: url(:/imgs/add-button-dark.png);
+	padding: 8px 8px 8px 8px;
+}
+
+QToolButton:hover {
+	background-color: #dcdcdc;
+}</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../Resources.qrc">
+          <normaloff>:/imgs/icons/add-button-dark.png</normaloff>:/imgs/icons/add-button-dark.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="edit_button">
+        <property name="minimumSize">
+         <size>
+          <width>35</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton {
+	background-color: #f2f3f7;
+	border: 1px solid #dcdcdc;
+	border-radius: 5px;
+	image: url(:/imgs/edit-button-dark.png);
+	padding: 8px 8px 8px 8px;
+}
+
+QToolButton:hover {
+	background-color: #dcdcdc;
+}</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../Resources.qrc">
+          <normaloff>:/imgs/icons/edit-button-dark.png</normaloff>:/imgs/icons/edit-button-dark.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="remove_button">
+        <property name="minimumSize">
+         <size>
+          <width>35</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton {
+	background-color: #f2f3f7;
+	border: 1px solid #dcdcdc;
+	border-radius: 5px;
+	image: url(:/imgs/delete-button-dark.png);
+	padding: 8px 8px 8px 8px;
+}
+
+QToolButton:hover {
+	background-color: #dcdcdc;
+}</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../Resources.qrc">
+          <normaloff>:/imgs/icons/delete-button-dark.png</normaloff>:/imgs/icons/delete-button-dark.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontal_spacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QComboBox" name="column_box">
+        <property name="maximumSize">
+         <size>
+          <width>170</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+    padding: 5px;
+	background-color: #f2f4f7;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+	font-weight: 500;
+	color: #374856;
+}
+
+QComboBox::drop-down {
+	background-color: #f2f4f7;
+    width: 25px;
+    border-left: 1px solid #dcdcdc;
+}
+
+QComboBox::down-arrow {
+	image: url(:/imgs/icons/down-arrow-dark.png)
+    width: 15px;
+    height: 15px;
+}
+
+QComboBox::item {
+    background-color: #f2f4f7;
+    color: #374856;
+}
+
+QComboBox::item:selected {
+    background-color: #dcdcdc;
+    color: #374856;
+	font-weight: bold;
+}</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Партия</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Наименование</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Количество</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Дата поставки</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Срок годности</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="search_line">
+        <property name="maximumSize">
+         <size>
+          <width>170</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+	background-color: #f2f4f7;
+	border: 1px solid #dcdcdc;
+	border-radius: 5px;
+	font-weight: 500;
+	padding: 5px 5px 5px 5px;
+	color: #374856;
+}	
+
+QLineEdit:focus {
+	border: 1px solid #374856;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Поиск</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tab_widget">
+      <property name="styleSheet">
+       <string notr="true">QTabWidget {
+    background-color: #f2f3f7;
+    border: none;
+}
+
+QTabBar::tab {
+    background-color: #f2f3f7;
+    color: #374856;
+	border: 1px solid #dcdcdc;
+	border-radius: 5px;
+	margin: 5px 3px 5px 1px;
+	padding: 5px 5px 5px 0px;
+}
+
+QTabBar::tab:selected {
+    background-color: #dcdcdc;
+    color: #374856;
+	font-weight: bold;
+}
+
+QTabBar::close-button {
+	image: url(:/imgs/icons/close-button-dark.png)
+	padding: 0px 2px 0px 2px;
+     subcontrol-position: left;
+	border-radius: 2px;
+ }
+
+QTabBar::close-button:hover {
+	background-color: #ffffff;
+}
+</string>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideRight</enum>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Tab 1</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Tab 2</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="file_menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="action_new"/>
+    <addaction name="action_open"/>
+    <addaction name="separator"/>
+    <addaction name="action_save"/>
+    <addaction name="action_save_as"/>
+    <addaction name="separator"/>
+    <addaction name="action_close"/>
+    <addaction name="action_close_all"/>
+   </widget>
+   <widget class="QMenu" name="edit_menu">
+    <property name="title">
+     <string>Редактировать</string>
+    </property>
+    <addaction name="action_add"/>
+    <addaction name="action_edit"/>
+    <addaction name="action_remove"/>
+   </widget>
+   <widget class="QMenu" name="anaylysis_menu">
+    <property name="title">
+     <string>Анализ</string>
+    </property>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>Графики</string>
+     </property>
+     <addaction name="action_show_chart_supply_rate_date"/>
+    </widget>
+    <addaction name="menu_4"/>
+   </widget>
+   <addaction name="file_menu"/>
+   <addaction name="edit_menu"/>
+   <addaction name="anaylysis_menu"/>
+  </widget>
+  <action name="action_new">
+   <property name="text">
+    <string>Новый</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_open">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_save_as">
+   <property name="text">
+    <string>Сохранить как</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="action_close">
+   <property name="text">
+    <string>Закрыть</string>
+   </property>
+  </action>
+  <action name="action_close_all">
+   <property name="text">
+    <string>Закрыть все</string>
+   </property>
+  </action>
+  <action name="action_undo">
+   <property name="text">
+    <string>Отменить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="action_redo">
+   <property name="text">
+    <string>Повторить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="action_cut">
+   <property name="text">
+    <string>Вырезать</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="action_copy">
+   <property name="text">
+    <string>Копировать</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="action_paste">
+   <property name="text">
+    <string>Вставить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="action_add">
+   <property name="text">
+    <string>Добавить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="action_edit">
+   <property name="text">
+    <string>Изменить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="action_remove">
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="action_show_chart_supply_rate_date">
+   <property name="text">
+    <string>Объем поставок / Дата</string>
+   </property>
+  </action>
+  <action name="action_filter">
+   <property name="text">
+    <string>Filter</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../Resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>add_button</sender>
+   <signal>clicked()</signal>
+   <receiver>action_add</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>25</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edit_button</sender>
+   <signal>clicked()</signal>
+   <receiver>action_edit</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>remove_button</sender>
+   <signal>clicked()</signal>
+   <receiver>action_remove</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>column_box</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>action_filter</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>452</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>search_line</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>action_filter</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>661</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

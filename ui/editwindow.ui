@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditWindow</class>
+ <widget class="QWidget" name="EditWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>254</width>
+    <height>320</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Изменение</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #ffffff;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="batch_label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	color: #989899;
+	font-weight: 500;
+}</string>
+       </property>
+       <property name="text">
+        <string>Номер партии</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="batch_edit">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+	background-color: #f2f4f7;
+	border: 1px solid #dcdcdc;
+	border-radius: 5px;
+	font-weight: 500;
+	padding: 5px 5px 5px 5px;
+	color: #374856;
+}	
+
+QLineEdit:focus {
+	border: 1px solid #374856;
+}</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="name_label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	color: #989899;
+	font-weight: 500;
+}</string>
+       </property>
+       <property name="text">
+        <string>Наименование</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="name_edit">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+	background-color: #f2f4f7;
+	border: 1px solid #dcdcdc;
+	border-radius: 5px;
+	font-weight: 500;
+	padding: 5px 5px 5px 5px;
+	color: #374856;
+}	
+
+QLineEdit:focus {
+	border: 1px solid #374856;
+}</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="count_label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	color: #989899;
+	font-weight: 500;
+}</string>
+       </property>
+       <property name="text">
+        <string>Количество</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="count_edit">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+	background-color: #f2f4f7;
+	border: 1px solid #dcdcdc;
+	border-radius: 5px;
+	font-weight: 500;
+	padding: 5px 5px 5px 5px;
+	color: #374856;
+}	
+
+QLineEdit:focus {
+	border: 1px solid #374856;
+}
+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="batch_date_label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	color: #989899;
+	font-weight: 500;
+}</string>
+       </property>
+       <property name="text">
+        <string>Дата поставки</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QDateEdit" name="batch_date_edit">
+       <property name="styleSheet">
+        <string notr="true">QDateEdit {
+    background-color: #f2f4f7;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+	padding: 5px 5px 5px 5px;
+	color: #374856;
+	font-weight: 500;
+}
+
+QDateEdit:focus {
+	border: 1px solid #374856;
+    outline: none;
+}
+</string>
+       </property>
+       <property name="displayFormat">
+        <string>dd.MM.yyyy</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+       <property name="date">
+        <date>
+         <year>2023</year>
+         <month>5</month>
+         <day>28</day>
+        </date>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QDateEdit" name="shelf_life_date_edit">
+       <property name="styleSheet">
+        <string notr="true">QDateEdit {
+    background-color: #f2f4f7;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+	padding: 5px 5px 5px 5px;
+	color: #374856;
+	font-weight: 500;
+}
+
+QDateEdit:focus {
+	border: 1px solid #374856;
+    outline: none;
+}
+</string>
+       </property>
+       <property name="displayFormat">
+        <string>dd.MM.yyyy</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+       <property name="date">
+        <date>
+         <year>2023</year>
+         <month>5</month>
+         <day>28</day>
+        </date>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="shelf_life_date_label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	color: #989899;
+	font-weight: 500;
+}</string>
+       </property>
+       <property name="text">
+        <string>Срок годности</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="apply_button">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: #f2f3f7;
+	border: 1px solid #dcdcdc;
+	border-radius: 5px;
+	padding: 8px 8px 8px 8px;
+	color: #374856;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+	background-color: #dcdcdc;
+}</string>
+     </property>
+     <property name="text">
+      <string>Применить</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

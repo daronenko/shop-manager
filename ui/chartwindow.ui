@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChartWindow</class>
+ <widget class="QWidget" name="ChartWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>320</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Анализ</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #ffffff;</string>
+  </property>
+  <layout class="QVBoxLayout" name="vertical_layout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontal_layout">
+     <item>
+      <widget class="QComboBox" name="goods_box">
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+    padding: 5px;
+	background-color: #f2f4f7;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+	font-weight: 500;
+	color: #374856;
+}
+
+QComboBox::drop-down {
+	background-color: #f2f4f7;
+    width: 25px;
+    border-left: 1px solid #dcdcdc;
+}
+
+QComboBox::down-arrow {
+	image: url(:/imgs/icons/down-arrow-dark.png)
+    width: 15px;
+    height: 15px;
+}
+
+QComboBox::item {
+    background-color: #f2f4f7;
+    color: #374856;
+}
+
+QComboBox::item:selected {
+    background-color: #dcdcdc;
+    color: #374856;
+	font-weight: bold;
+}</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontal_spacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+  <action name="action_update_chart">
+   <property name="text">
+    <string>update_chart</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>goods_box</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>action_update_chart</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

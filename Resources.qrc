@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/imgs">
+        <file>icons/add-button-dark.png</file>
+        <file>icons/delete-button-dark.png</file>
+        <file>icons/down-arrow-dark.png</file>
+        <file>icons/edit-button-dark.png</file>
+        <file>icons/close-button-dark.png</file>
+    </qresource>
+</RCC>
