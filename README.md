@@ -9,6 +9,7 @@ practical work at the department of iu6 of bmstu
 ## Contents
 
 * [Task](#task)
+* [Image](#image)
 * [Installation](#installation)
     * [MacOS](#macos-installation)
     * [Linux](#linux-installation)
@@ -30,6 +31,10 @@ as perceive each of the listed requests and give an answer to it.
 1. Determine the most perishable item (if there are several, show all).
 1. Build a schedule of changes in the volume of receipts of a given product
 by dates.
+
+## Image <a name="image"></a>
+
+![Main Window](img/main_window.png)
 
 ## Installation <a name="installation"></a>
 
