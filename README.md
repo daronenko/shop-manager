@@ -40,21 +40,48 @@ by dates.
 
 ### MacOS <a name="macos-installation"></a>
 
+1. Install `qt` library:
+
+```sh
+brew install qt
+```
+
+2. Build project:
+
 ```sh
 git clone git@github.com:daronenko/shop-manager.git
 cd shop-manager/build
 qmake ../shop-manager.pro
 make
+```
+
+3. Run application:
+
+```sh
 open shop-manager.app
 ```
 
 ### Linux <a name="linux-installation"></a>
 
+1. Install `qt` library:
+
+```sh
+sudo apt update
+sudo apt install qt5-qmake
+```
+
+2. Build project:
+
 ```sh
 git clone git@github.com:daronenko/shop-manager.git
 cd shop-manager/build
 qmake ../shop-manager.pro
 make
+```
+
+3. Run application:
+
+```sh
 ./shop-manager
 ```
 
