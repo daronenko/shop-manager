@@ -169,7 +169,7 @@ QComboBox::drop-down {
 }
 
 QComboBox::down-arrow {
-	image: url(:/imgs/icons/down-arrow-dark.png)
+	image: url(:/imgs/icons/down-arrow-dark.png);
     width: 15px;
     height: 15px;
 }
@@ -268,7 +268,7 @@ QTabBar::tab:selected {
 }
 
 QTabBar::close-button {
-	image: url(:/imgs/icons/close-button-dark.png)
+	image: url(:/imgs/icons/close-button-dark.png);
 	padding: 0px 2px 0px 2px;
      subcontrol-position: left;
 	border-radius: 2px;

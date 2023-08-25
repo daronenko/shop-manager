@@ -153,8 +153,7 @@ QLineEdit:focus {
 QDateEdit:focus {
 	border: 1px solid #374856;
     outline: none;
-}
-</string>
+}</string>
        </property>
        <property name="displayFormat">
         <string>dd.MM.yyyy</string>

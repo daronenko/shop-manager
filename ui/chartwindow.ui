@@ -38,7 +38,7 @@ QComboBox::drop-down {
 }
 
 QComboBox::down-arrow {
-	image: url(:/imgs/icons/down-arrow-dark.png)
+	image: url(:/imgs/icons/down-arrow-dark.png);
     width: 15px;
     height: 15px;
 }
