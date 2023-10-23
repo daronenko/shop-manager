@@ -2,7 +2,7 @@
 
 # shop-manager
 
-practical work at the department of iu6 of bmstu
+practical work at the department of cs6 of bmstu
 
 </div>
 
